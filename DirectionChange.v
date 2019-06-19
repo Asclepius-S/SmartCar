@@ -40,7 +40,7 @@ module DirectionChange(
 	 if(En_Tracing == 1)
 	 begin
 	 
-      if( (PathDectSignal[3] == 0 || PathDectSignal[2] == 0) && PathDectSignal[0] == 0)//处理右锐角和右直角的转动
+           if( (PathDectSignal[3] == 0 || PathDectSignal[2] == 0) && PathDectSignal[0] == 0)//处理右锐角和右直角的转动
 	   begin   
 	     //IFDelay <= 4'b0001;                                                                      
 	     Led_Direction <= 4'b0011;                                                             
