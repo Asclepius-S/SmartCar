@@ -19,9 +19,9 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module DirectionChange(
-    input clk,
+         input clk,
 	 input En_Tracing,
-    input [3:0] PathDectSignal,
+         input [3:0] PathDectSignal,
 	 input pwm_255,
 	 input pwm_250,
 	 input pwm_220,
@@ -40,7 +40,7 @@ module DirectionChange(
 	 if(En_Tracing == 1)
 	 begin
 	 
-      if( (PathDectSignal[3] == 0 || PathDectSignal[2] == 0) && PathDectSignal[0] == 0)//´¦ÀíÓÒÈñ½ÇºÍÓÒÖ±½ÇµÄ×ª¶¯
+      if( (PathDectSignal[3] == 0 || PathDectSignal[2] == 0) && PathDectSignal[0] == 0)//å¤„ç†å³é”è§’å’Œå³ç›´è§’çš„è½¬åŠ¨
 	   begin   
 	     //IFDelay <= 4'b0001;                                                                      
 	     Led_Direction <= 4'b0011;                                                             
@@ -51,7 +51,7 @@ module DirectionChange(
 		  //delay(80);                                             
 	   end 
 	 
-	   else if( PathDectSignal[3] == 0 && (PathDectSignal[1] == 0 || PathDectSignal[0] == 0) )//´¦Àí×óÈñ½ÇºÍ×óÖ±½ÇµÄ×ª¶¯
+	   else if( PathDectSignal[3] == 0 && (PathDectSignal[1] == 0 || PathDectSignal[0] == 0) )//å¤„ç†å·¦é”è§’å’Œå·¦ç›´è§’çš„è½¬åŠ¨
 	   begin     
 	     //IFDelay <= 4'b1000;                                                                    
 	     Led_Direction <= 4'b1100;                                                             
@@ -62,7 +62,7 @@ module DirectionChange(
 		  //delay(80);                                             
 	   end
 	 
-	   else if( PathDectSignal[3] == 0 )//×î×ó±ß¼ì²âµ½
+	   else if( PathDectSignal[3] == 0 )//æœ€å·¦è¾¹æ£€æµ‹åˆ°
 	   begin      
 	     //IFDelay <= 4'b0100;                                                                   
 	     Led_Direction <= 4'b1000;                                                             
@@ -73,7 +73,7 @@ module DirectionChange(
 		  //delay(2);                                             
 	   end 
 	 
-	   else if( PathDectSignal[0] == 0 )//×îÓÒ±ß¼ì²âµ½
+	   else if( PathDectSignal[0] == 0 )//æœ€å³è¾¹æ£€æµ‹åˆ°
 	   begin    
 	     //IFDelay <= 4'b0010;                                                                     
 	     Led_Direction <= 4'b0001;                                                             
@@ -84,7 +84,7 @@ module DirectionChange(
 		  //delay(2);                                             
 	   end 
 	 
-	   else if( PathDectSignal[2] == 0 && PathDectSignal[1] ==1 )//´¦Àí×óĞ¡Íä
+	   else if( PathDectSignal[2] == 0 && PathDectSignal[1] ==1 )//å¤„ç†å·¦å°å¼¯
 	   begin                                                                         
 	     Led_Direction <= 4'b0100;                                                             
 		  Speed_Wheel_1 <= pwm_0;                                                      
@@ -93,7 +93,7 @@ module DirectionChange(
 		  Control_Wheel_2 <= 2'b01;                                                    
 	   end      
 	 
-	   else if( PathDectSignal[2] == 1 && PathDectSignal[1] ==0 )//´¦ÀíÓÒĞ¡Íä
+	   else if( PathDectSignal[2] == 1 && PathDectSignal[1] ==0 )//å¤„ç†å³å°å¼¯
 	   begin                                                                         
 	     Led_Direction <= 4'b0010;                                                             
 		  Speed_Wheel_1 <= pwm_220;                                                      
@@ -102,7 +102,7 @@ module DirectionChange(
 		  Control_Wheel_2 <= 2'b01;                                                    
 	   end 
 	 
-	   else if( PathDectSignal[2] == 0 && PathDectSignal[1] ==0 )//´¦ÀíÖ±Ïß
+	   else if( PathDectSignal[2] == 0 && PathDectSignal[1] ==0 )//å¤„ç†ç›´çº¿
 	   begin                                                                         
 	     Led_Direction <= 4'b0110;                                                             
 		  Speed_Wheel_1 <= pwm_255;                                                      
@@ -112,7 +112,7 @@ module DirectionChange(
 	   end
 	 
 	   else
-	   begin//Æ«Àë¹ìµÀ
+	   begin//åç¦»è½¨é“
 	     Led_Direction <= 4'b1111;
 	     Speed_Wheel_1 <= pwm_150;                                                      
 		  Speed_Wheel_2 <= pwm_150;                                                      
