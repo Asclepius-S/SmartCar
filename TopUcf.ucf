@@ -1,0 +1,89 @@
+//////////////////////Ñ°¼£Ucf///////////////////
+NET "clk" LOC = "B8"; 
+//NET "PathDectSignal[3]" LOC = "C12"; 
+NET "PathDectSignal[2]" LOC = "A13"; 
+NET "PathDectSignal[1]" LOC = "C13"; 
+NET "PathDectSignal[0]" LOC = "D12";
+NET "Speed_Wheel_1" LOC = "A9";
+NET "Speed_Wheel_2" LOC = "B9";
+NET "Control_Wheel_1[0]" LOC = "C6";
+NET "Control_Wheel_1[1]" LOC = "B6";
+NET "Control_Wheel_2[0]" LOC = "C5";
+NET "Control_Wheel_2[1]" LOC = "B7";
+NET "SpeedControl" LOC = "P11" ;
+NET "En_Tracing" LOC = "K3";
+NET "Led_Direction[3]" LOC = "P6" ;
+NET "Led_Direction[2]" LOC = "P7" ;
+NET "Led_Direction[1]" LOC = "M11" ;
+NET "Led_Direction[0]" LOC = "M5" ;
+
+
+NET "Led_Direction[3]" IOSTANDARD = LVCMOS33;
+NET "Led_Direction[2]" IOSTANDARD = LVCMOS33;
+NET "Led_Direction[1]" IOSTANDARD = LVCMOS33;
+NET "Led_Direction[0]" IOSTANDARD = LVCMOS33;
+
+NET "clk" IOSTANDARD = LVCMOS33;
+NET "PathDectSignal[2]" IOSTANDARD = LVCMOS33; 
+NET "PathDectSignal[1]" IOSTANDARD = LVCMOS33;
+NET "PathDectSignal[0]" IOSTANDARD = LVCMOS33;
+NET "Speed_Wheel_1" IOSTANDARD = LVCMOS33;
+NET "Speed_Wheel_2" IOSTANDARD = LVCMOS33;
+NET "Control_Wheel_1[0]" IOSTANDARD = LVCMOS33;
+NET "Control_Wheel_1[1]" IOSTANDARD = LVCMOS33;
+NET "Control_Wheel_2[0]" IOSTANDARD = LVCMOS33;
+NET "Control_Wheel_2[1]" IOSTANDARD = LVCMOS33;
+NET "SpeedControl" IOSTANDARD = LVCMOS33;
+NET "En_Tracing" CLOCK_DEDICATED_ROUTE = FALSE;
+
+///////////////////¼Æ¹¤¼þUcf//////////////////////
+NET "nCR" LOC = "B4";
+NET "detector" LOC = "A10";
+NET "clk" CLOCK_DEDICATED_ROUTE = FALSE;
+NET "detector" CLOCK_DEDICATED_ROUTE = FALSE;
+NET "seg<0>" LOC = "L14"; 
+NET "seg<1>" LOC = "H12"; 
+NET "seg<2>" LOC = "N14"; 
+NET "seg<3>" LOC = "N11"; 
+NET "seg<4>" LOC = "P12"; 
+NET "seg<5>" LOC = "L13"; 
+NET "seg<6>" LOC = "M12"; 
+
+
+NET "Light<3>" LOC = "K14"; # Bank = 1, Signal name = AN3
+NET "Light<2>" LOC = "M13"; # Bank = 1, Signal name = AN2
+NET "Light<1>" LOC = "J12"; # Bank = 1, Signal name = AN1
+NET "Light<0>" LOC = "F12"; # Bank = 1, Signal name = AN0
+
+NET "seg<0>" IOSTANDARD = LVCMOS33;
+NET "seg<1>" IOSTANDARD = LVCMOS33;
+NET "seg<2>" IOSTANDARD = LVCMOS33; 
+NET "seg<3>" IOSTANDARD = LVCMOS33;
+NET "seg<4>" IOSTANDARD = LVCMOS33;
+NET "seg<5>" IOSTANDARD = LVCMOS33;
+NET "seg<6>" IOSTANDARD = LVCMOS33;
+
+NET "Light<3>" IOSTANDARD = LVCMOS33;
+NET "Light<2>" IOSTANDARD = LVCMOS33;
+NET "Light<1>" IOSTANDARD = LVCMOS33;
+NET "Light<0>" IOSTANDARD = LVCMOS33;
+
+
+///////////////////±ÜÕÏUcf//////////////////////
+NET "nCR_Avoid" LOC = "N3";
+NET "another" LOC = "C9";
+NET "Echo_Signal" LOC = "C12";
+NET "Trig_Signal" LOC = "B5";
+
+NET "nCR_Avoid" IOSTANDARD = LVCMOS33;
+NET "another" IOSTANDARD = LVCMOS33;
+NET "Echo_Signal" IOSTANDARD = LVCMOS33;
+NET "Trig_Signal" IOSTANDARD = LVCMOS33;
+
+
+
+
+
+
+
+
